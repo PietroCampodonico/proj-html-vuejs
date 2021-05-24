@@ -1,0 +1,10 @@
+button {
+    display: $disp_flex;
+    @include default-button;
+    .icon-container {
+        margin-right: 5px;
+    }
+    &:hover {
+        @include button-hover-default;
+    }
+}

@@ -1,0 +1,19 @@
+header {
+    background-color: #f0efef;
+    padding-top: $spacing / 3;
+}
+
+nav {
+    @include flex-align-center;
+    justify-content: space-between;
+    &>div {
+        display: $disp_flex;
+    }
+    i, select, input {
+    color: $font_primary_color;
+    }
+}
+
+.brand-container {
+    max-width: 150px;
+}

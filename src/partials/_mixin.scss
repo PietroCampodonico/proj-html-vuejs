@@ -1,0 +1,24 @@
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin list-styles {
+    list-style: none;
+    margin: 0;
+    display: $disp_flex;
+}
+
+@mixin default-button {
+    background-color: #22ad96;
+    font-weight: bold;
+    color: white;
+    padding: $spacing / 3;
+    border-radius: 5px;
+    border: none;
+}
+
+@mixin button-hover-default {
+    background-color: $font_primary_color;
+    transition: $transition_color;
+}

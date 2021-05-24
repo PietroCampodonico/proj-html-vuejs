@@ -1,0 +1,21 @@
+section {
+    display: $disp_flex;
+    padding: $spacing * 2;
+}
+
+//Sistemare regola generica size font
+.first {
+    background-color: #f0efef;
+    //bug da fixare
+    //background-image: url("images/jumbo-overlay.svg");   
+    color: $font_primary_color;
+    .wrapper {
+        display: $disp_flex;
+    }
+    .left {
+        margin-top: $spacing * 2;
+        h1, p {
+            margin-bottom: $spacing;
+        }
+    }
+}

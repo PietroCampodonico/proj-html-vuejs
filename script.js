@@ -1,5 +1,3 @@
-const { vue } = require("laravel-mix");
-
-new vue({
+new Vue({
     el: "#app",
 })
