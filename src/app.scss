@@ -1,0 +1,13 @@
+//Variabili e regole comuni
+@import "partials/variables";
+@import "partials/common";
+@import "partials/mixin";
+
+//Main sections
+@import "partials/header";
+@import "partials/main";
+@import "partials/footer";
+
+//Regole per elementi html specifici
+@import "partials/buttons";
+
