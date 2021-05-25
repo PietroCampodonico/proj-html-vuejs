@@ -44,3 +44,29 @@ h1 {
     line-height: 1.5em;
     font-size: 2em;
 }
+
+p {
+    font-size: $font_small;
+}
+
+a {
+    font-size: $font_small;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+        color: $font_secondary_color;
+        transition: $transition_color;
+    }
+}
+
+.uppercased {
+    text-transform: uppercase;
+}
+
+.capitalized {
+    text-transform: capitalize;
+}
+
+.special-heading {
+    @include special-font
+}

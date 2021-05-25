@@ -4,6 +4,8 @@ section {
 }
 
 //Sistemare regola generica size font
+
+//Section.Firts
 .first {
     background-color: #f0efef;
     //bug da fixare
@@ -16,6 +18,33 @@ section {
         margin-top: $spacing * 2;
         h1, p {
             margin-bottom: $spacing;
+        }
+    }
+}
+
+//Section.Second 
+.second {
+    flex-direction: column;
+    .row{
+        &.top {
+            text-align: center;
+            h1 {
+                display: inline-block;
+                margin-top: 5px;
+            }
+        }
+        &.bottom {
+            display: $disp_flex;
+            margin-top: $spacing * 1.5;
+            .card {
+                @include card-styles;
+                h5 {
+                    text-transform: capitalize;
+                }
+                .img-container {
+                    max-width: 100px;
+                }
+            }
         }
     }
 }

@@ -22,3 +22,17 @@
     background-color: $font_primary_color;
     transition: $transition_color;
 }
+
+@mixin special-font {
+    color: $font_secondary_color;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@mixin card-styles {
+    display: $disp_flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 20%;
+    padding: $spacing/2;
+}
