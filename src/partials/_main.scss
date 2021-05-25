@@ -1,6 +1,32 @@
+main {
+    background-color: #fefefe;
+    p{
+        color: $font_tertiary_color;
+    }
+
+    .icon-container {
+    margin-left: $spacing;
+    background-color: white;
+    border-radius: 50%;
+    }
+}
+
 section {
     display: $disp_flex;
     padding: $spacing * 2;
+}
+
+
+
+.stain-container {
+    max-width: 300px;
+    position: relative;
+    top: 50px;
+    .stained-img {
+        position: absolute;
+        top: 50%;
+        transform: translate(-70%, -50%);
+    }
 }
 
 //Sistemare regola generica size font
@@ -41,10 +67,76 @@ section {
                 h5 {
                     text-transform: capitalize;
                 }
+                p {
+                    margin: ($spacing/3) 0
+                }
                 .img-container {
                     max-width: 100px;
                 }
             }
         }
     }
+}
+
+.third {
+    flex-direction: column;
+    .row {
+        display: $disp_flex;
+        .right{
+            p {
+                span {
+                    color: $font_darker_tertiary_color;
+                    font-weight: bold;
+                }
+            }
+
+            h1{
+                margin-bottom: $spacing;
+            }
+
+            &>div:first-of-type {
+                display: $disp_flex;
+                flex-direction: column;
+                margin-bottom: $spacing / 2;
+            }
+
+            div {
+                @include flex-align-center;
+                justify-content: space-between;
+                border-radius: 5px 5px 0 0;
+                padding: 5px $spacing/2;
+                background-color: white;
+
+                .icon-container {
+                    background-color: $lighter_primary_color; 
+                    i {
+                        padding: 3px;
+                        font-size: 10px;
+                        color: white;
+                    }
+                }
+
+                span {
+                    @include flex-align-center;
+                }
+                
+                &.green {
+                    background-color: $font_secondary_color;
+                    color: white;
+                    .icon-container {
+                        background-color: white;
+                        i {
+                            color: $font_secondary_color;
+
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.fourth {
+
 }

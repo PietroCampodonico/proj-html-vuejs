@@ -1,7 +1,7 @@
 button {
     display: $disp_flex;
     @include default-button;
-    .icon-container {
+    .btn-icon-container {
         margin-right: 5px;
     }
     &:hover {
