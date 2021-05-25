@@ -1,5 +1,5 @@
 main {
-    background-color: #fefefe;
+    background-color: $bg_primary_color;
     p{
         color: $font_tertiary_color;
     }
@@ -33,7 +33,7 @@ section {
 
 //Section.Firts
 .first {
-    background-color: #f0efef;
+    background-color: $bg_secondary_color;
     //bug da fixare
     //background-image: url("images/jumbo-overlay.svg");   
     color: $font_primary_color;
@@ -44,6 +44,10 @@ section {
         margin-top: $spacing * 2;
         h1, p {
             margin-bottom: $spacing;
+        }
+
+        p {
+            color: $lighter_primary_color;
         }
     }
 }
@@ -138,5 +142,21 @@ section {
 }
 
 .fourth {
+    background-color: $bg_secondary_color;
 
+    .wrapper {
+        display: $disp_flex;
+        justify-content: space-evenly;
+        div {
+            text-align: center;
+            h1 {
+                color: $font_secondary_color;
+            }
+            p {
+                text-transform: uppercase;
+                color: $font_primary_color;
+                font-weight: bold;
+            }
+        }
+    }
 }
