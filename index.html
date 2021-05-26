@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:wght@200&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <title>MaxCoach</title>
 </head>
@@ -34,19 +35,23 @@
                                 </select>
                             </li>
 
-                            <div class="icon-contaier">
+                            <div class="icon-contaier shopping-cart">
                                 <i class="fas fa-shopping-cart"></i>
+                                <div class="cart-items">0</div>
                             </div>
 
                             <div class="icon-contaier">
                                 <i class="fas fa-user-circle"></i>
                             </div>
 
-                            <input type="text" placeholder="Search...">
+                            <div class="search-bar">
+                                <input type="text" placeholder="Search...">
 
-                            <div class="icon-contaier">
-                                <i class="fas fa-search"></i>
+                                <div class="icon-container">
+                                    <i class="fas fa-search"></i>
+                                </div>
                             </div>
+                            
                         </ul>
                     </div>
 
@@ -221,11 +226,209 @@
                 </div>
             </section>
 
+            <!-- RIVEDERE LARGHEZZA STATICA CARDS -->
+            <section class="fifth">
+                <div class="wrapper">
+                    <div class="row top">
+                        <p class="uppercased">choose where you'd like to begin</p>
+                    
+                        <h1 class="capitalized">latest featured</h1>
+                        <h1 class="special-heading uppercased">courses</h1>
+                    </div>
+    
+                    <div class="row middle">
+                        <div class="course-card">
+                            <div class="img-container">
+                                <img src="images/course-02-480x298.jpg" alt="">
+                                <div class="course-price">$40.<small>00</small></div>
+                            </div>
+
+                            <div class="course-info">
+                                <div class="teacher">
+                                    <span class="teacher-pic">
+                                        <img src="images/73ee246daf47502812ccefc84bf02898.jpeg" alt="">
+                                    </span>
+                                    <span>Blance Fields</span>
+                                </div>
+    
+                                <h5>Learning to Write as a Professional Author</h5>
+    
+                                <div class="icon-container">
+                                    <i class="fas fa-file-image"></i>
+                                    <span>20 Lessons</span>
+                                </div>
+    
+                                <div class="icon-container">
+                                    <i class="fas fa-user"></i>
+                                    <span>50 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="course-card">
+                            <div class="img-container">
+                                <img src="images/stock-full-hd-03-480x298.jpg" alt="">
+                                <div class="course-price">Free</div>
+                            </div>
+                        
+                            <div class="course-info">
+                                <div class="teacher">
+                                    <span class="teacher-pic">
+                                        <img src="images/d0d504142acfde820eef2f11feea6253.jpeg" alt="">
+                                    </span>
+                                    <span>Maggie Strickland</span>
+                                </div>
+                        
+                                <h5>Customer-centric Info-Tech Strategies</h5>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-file-image"></i>
+                                    <span>24 Lessons</span>
+                                </div>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-user"></i>
+                                    <span>769 Students</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="img-container">
+                                <img src="images/stock-full-hd-04-480x298.jpg" alt="">
+                                <div class="course-price">$19.<small>00</small></div>
+                            </div>
+                        
+                            <div class="course-info">
+                                <div class="teacher">
+                                    <span class="teacher-pic">
+                                        <img src="images/d0d504142acfde820eef2f11feea6253.jpeg" alt="">
+                                    </span>
+                                    <span>Maggie Strickland</span>
+                                </div>
+                        
+                                <h5>Open Programming Courses for Everyone: Python</h5>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-file-image"></i>
+                                    <span>17 Lessons</span>
+                                </div>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-user"></i>
+                                    <span>62 Students</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="img-container">
+                                <img src="images/stock-full-hd-06-480x298.jpg" alt="">
+                                <div class="course-price">$26.<small>00</small></div>
+                            </div>
+                        
+                            <div class="course-info">
+                                <div class="teacher">
+                                    <span class="teacher-pic">
+                                        <img src="images/73ee246daf47502812ccefc84bf02898.jpeg" alt="">
+                                    </span>
+                                    <span>Blance Fields</span>
+                                </div>
+                        
+                                <h5>Academic Listening and Note-taking</h5>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-file-image"></i>
+                                    <span>14 Lessons</span>
+                                </div>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-user"></i>
+                                    <span>67 Students</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="img-container">
+                                <img src="images/course-featured-image-01-480x298.jpg" alt="">
+                                <div class="course-price">$39.<small>00</small></div>
+                            </div>
+                        
+                            <div class="course-info">
+                                <div class="teacher">
+                                    <span class="teacher-pic">
+                                        <img src="images/73ee246daf47502812ccefc84bf02898.jpeg" alt="">
+                                    </span>
+                                    <span>Blance Fields</span>
+                                </div>
+                        
+                                <h5>Master jQuery in a Short Period of Time</h5>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-file-image"></i>
+                                    <span>6 Lessons</span>
+                                </div>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-user"></i>
+                                    <span>51 Students</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="img-container">
+                                <img src="images/stock-full-hd-05-480x298.jpg" alt="">
+                                <div class="course-price">$59.<small>00</small></div>
+                            </div>
+                        
+                            <div class="course-info">
+                                <div class="teacher">
+                                    <span class="teacher-pic">
+                                        <img src="images/73ee246daf47502812ccefc84bf02898.jpeg" alt="">
+                                    </span>
+                                    <span>Blance Fields</span>
+                                </div>
+                        
+                                <h5>Introduction to Javascript for Beginners</h5>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-file-image"></i>
+                                    <span>14 Lessons</span>
+                                </div>
+                        
+                                <div class="icon-container">
+                                    <i class="fas fa-user"></i>
+                                    <span>76 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="row bottom">
+                        <button>View all Courses &#8594</button>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
-        <footer></footer>
+        <footer>
+            <div class="wrapper">
+                <div class="col-6">
+                    <h5>Address</h5>
 
-        <!-- <script src="script.js"></script> -->
+                    <p>382 NE 191 St. # 87394 Miami, FL, 33179-3899</p>
+                    <p>+1(305) 547-9909 19am - 5pm EST, Monday-Friday</p>
+                    <p>support@maxcoach.com</p>
+                </div>
+                <div class="col-6"></div>
+            </div>
+        </footer>
+
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

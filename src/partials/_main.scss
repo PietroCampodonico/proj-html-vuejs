@@ -26,6 +26,7 @@ section {
         position: absolute;
         top: 40%;
         transform: translate(-70%, -50%);
+        
     }
 }
 
@@ -33,9 +34,23 @@ section {
 
 //Section.Firts
 .first {
+    position: relative;
+    overflow: hidden;
     background-color: #e8e5e2;
-    background-image: url("../../images/jumbo-overlay.svg"); 
     color: $font_primary_color;
+    background-image: url("../../images/jumbo-overlay.svg"); 
+    
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: -15%;
+    //     left: -15%;
+    //     z-index: 1;
+    //     transform: rotate(180deg);
+    // }
     .wrapper {
         display: $disp_flex;
     }
@@ -92,6 +107,7 @@ section {
     }
 }
 
+//Section .Third
 .third {
     flex-direction: column;
     .row {
@@ -149,6 +165,7 @@ section {
     }
 }
 
+//Section .Fourth
 .fourth {
     background-color: $bg_secondary_color;
 
@@ -165,6 +182,83 @@ section {
                 color: $font_primary_color;
                 font-weight: bold;
             }
+        }
+    }
+}
+
+//Section .fifth
+//Rivedere larghezza statica
+.fifth {
+    flex-direction: column;
+    .row{
+        &.top {
+            text-align: center;
+            h1 {
+                display: inline-block;
+                margin-top: 5px;
+            }
+        }
+
+        &.middle {
+            display: $disp_flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .course-card {
+                //rivedere con larghezza non statica
+                max-width: 300px;
+                margin: $spacing $spacing / 3;
+
+                &:hover {
+                    box-shadow: 10px 10px 10px $bg_secondary_color;;
+                }
+                
+                .img-container {
+                    position: relative;
+                    max-width: 100%;
+                    margin-bottom: $spacing / 2;
+                    img {
+                        height: 100%;
+                    }
+                    
+                    .course-price {
+                        @include course-price-styles;
+                        min-width: 65px;
+                        text-align: center;
+                    }
+                }  
+
+                .course-info {
+                    padding-left: 15px;
+                    max-width: 75%;
+
+                    span, i {
+                        color: $font_tertiary_color;
+                    }
+    
+                    span {
+                        @include secondary-font-style;
+                    }
+    
+                    h5 {
+                        margin: $spacing/3 0;
+                    }
+    
+                    .teacher-pic {
+                        @include teacher-pic;
+                    }
+    
+                    .icon-container {
+                        display: inline-block;
+                        margin: 0 $spacing/3 0 0;
+                    }
+                }
+            }
+        }
+
+        &.bottom {
+            display: $disp_flex;
+            justify-content: center;
+            margin-top: $spacing;
         }
     }
 }

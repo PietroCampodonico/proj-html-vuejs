@@ -47,9 +47,7 @@ h1 {
 }
 
 p {
-    font-size: $font_small;
-    font-family: 'Poiret One', cursive;
-    font-family: 'Roboto', sans-serif;
+    @include secondary-font-style;
 }
 
 a {

@@ -18,6 +18,11 @@
     border: none;
 }
 
+@mixin secondary-font-style {
+    font-size: $font_small;
+    font-family: 'Roboto', sans-serif;
+}
+
 @mixin button-hover-default {
     background-color: $font_primary_color;
     transition: $transition_color;
@@ -45,4 +50,24 @@
     box-shadow: 10px 10px 10px 10px $bg_secondary_color;
     line-height: 15px;
     padding: $spacing / 2;
+}
+
+@mixin teacher-pic {
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+@mixin course-price-styles {
+    background-color: $font_secondary_color;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
 }
