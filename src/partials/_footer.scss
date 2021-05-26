@@ -1,3 +1,36 @@
+footer {
+    .wrapper {
+        display: $disp_flex;
+
+        .right {
+            display: $disp_flex;
+            max-height: 100px;
+
+            ul {
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin-right: $spacing;
+
+                li {
+                    margin-right: 10px;
+                    a {
+                        @include secondary-font-style;
+                        color: $font_tertiary_color;
+                        font-weight: lighter;
+                        &:hover {
+                            color: $font_primary_color;
+                            transition: $transition_color;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
 p {
     color: $font_tertiary_color;
 }
+

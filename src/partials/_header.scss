@@ -6,11 +6,28 @@ header {
 nav {
     @include flex-align-center;
     justify-content: space-between;
-    &>div {
-        @include flex-align-center;
+
+    * {
+        vertical-align: middle;
     }
+    
     i, select, input {
     color: $font_primary_color;
+    }
+
+    select{
+        font-family: 'Roboto', sans-serif;
+        padding: 0 $spacing / 2; 
+        border: 0;
+        outline: 0;
+        &:hover {
+            color: $font_secondary_color;
+            transition: $transition_color;
+        }
+    }
+
+    .icon-container {
+        margin: 0 $spacing/2;
     }
 
     .shopping-cart {
