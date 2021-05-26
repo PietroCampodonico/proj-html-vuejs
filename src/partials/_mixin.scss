@@ -25,7 +25,7 @@
 
 @mixin special-font {
     color: $font_secondary_color;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Poiret One', cursive;
 }
 
 @mixin card-styles {
@@ -33,5 +33,16 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 20%;
+    max-width: 25%;
+    margin: 0 $spacing/2;
+}
+
+@mixin dropdown-styles {
+    display: $disp_flex;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    box-shadow: 10px 10px 10px 10px $bg_secondary_color;
+    line-height: 15px;
+    padding: $spacing / 2;
 }

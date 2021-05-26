@@ -7,6 +7,7 @@ main {
     .icon-container {
     margin-left: $spacing;
     background-color: white;
+    position: relative;
     border-radius: 50%;
     }
 }
@@ -16,15 +17,14 @@ section {
     padding: $spacing * 2;
 }
 
-
-
 .stain-container {
     max-width: 300px;
     position: relative;
     top: 50px;
     .stained-img {
+        max-height: 400px;
         position: absolute;
-        top: 50%;
+        top: 40%;
         transform: translate(-70%, -50%);
     }
 }
@@ -33,9 +33,8 @@ section {
 
 //Section.Firts
 .first {
-    background-color: $bg_secondary_color;
-    //bug da fixare
-    //background-image: url("images/jumbo-overlay.svg");   
+    background-color: #e8e5e2;
+    background-image: url("../../images/jumbo-overlay.svg"); 
     color: $font_primary_color;
     .wrapper {
         display: $disp_flex;
@@ -48,6 +47,12 @@ section {
 
         p {
             color: $lighter_primary_color;
+        }
+    }
+
+    .right {
+        img {
+            max-height: 525px;
         }
     }
 }
@@ -76,6 +81,11 @@ section {
                 }
                 .img-container {
                     max-width: 100px;
+                    max-height: 100px;
+                    margin-bottom: $spacing / 2;
+                    img {
+                        height: 100%;
+                    }
                 }
             }
         }
@@ -98,46 +108,44 @@ section {
                 margin-bottom: $spacing;
             }
 
-            &>div:first-of-type {
+            .dropdown {
                 display: $disp_flex;
                 flex-direction: column;
                 margin-bottom: $spacing / 2;
-            }
 
-            div {
-                @include flex-align-center;
-                justify-content: space-between;
-                border-radius: 5px 5px 0 0;
-                padding: 5px $spacing/2;
-                background-color: white;
-
-                .icon-container {
-                    background-color: $lighter_primary_color; 
-                    i {
-                        padding: 3px;
-                        font-size: 10px;
-                        color: white;
-                    }
+                .menu {
+                    border-radius: 0 0 5px 5px;
+                    box-shadow: 10px 10px 10px $bg_secondary_color;
                 }
 
-                span {
-                    @include flex-align-center;
-                }
-                
-                &.green {
-                    background-color: $font_secondary_color;
-                    color: white;
+                div {
+                    @include dropdown-styles;
+    
                     .icon-container {
-                        background-color: white;
+                        background-color: $lighter_primary_color;
+                        @include flex-align-center; 
+                        padding: 0 3px;
                         i {
-                            color: $font_secondary_color;
-
+                            font-size: 10px;
+                            color: white;
+                        }
+                    }
+    
+                    &.green {
+                        
+                        background-color: $font_secondary_color;
+                        color: white;
+                       
+                        .icon-container {
+                            background-color: white;
+                            i {
+                                color: $font_secondary_color;
+                            }
                         }
                     }
                 }
             }
         }
-        
     }
 }
 
